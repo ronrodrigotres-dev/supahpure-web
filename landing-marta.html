@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Supahpure Studios | Animación Digital</title>
+<title>Marta | Supahpure Studios</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Gochi+Hand&display=swap" rel="stylesheet">
@@ -42,8 +42,9 @@ header{
   padding:1.2rem 5vw;
   display:flex;
   align-items:center;
+  justify-content:space-between;
   z-index:1000;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+  background:linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
 }
 
 .logo-container{
@@ -64,11 +65,30 @@ header{
   line-height:0.8;
 }
 
+.back-link{
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  font-size:0.95rem;
+  border:2px solid rgba(255,255,255,0.5);
+  padding:8px 20px;
+  border-radius:50px;
+  transition:0.3s ease;
+}
+
+.back-link:hover{
+  background:white;
+  color:black;
+}
+
 /* HERO */
 .hero{
   height:100vh;
   position:relative;
   overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .hero-video{
@@ -85,81 +105,119 @@ header{
   position:absolute;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.25);
+  background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(10,10,10,0.6));
 }
 
-/* PROJECTS */
-.project-row{
-  display:flex;
-  min-height:100vh;
-  align-items:center;
-  flex-wrap:wrap;
-}
-
-.project-row.reverse{
-  flex-direction:row-reverse;
-}
-
-.project-image,
-.project-info{
-  flex:1;
-  min-width:50%;
-  padding:5% 8%;
-}
-
-.project-image img{
-  width:100%;
-  border-radius:8px;
-  box-shadow:20px 20px 0 rgba(0,0,0,0.2);
-}
-
-.project-info h2{
-  font-weight:800;
-  font-size:3rem;
-  margin-bottom:1rem;
-}
-
-.project-info p{
-  margin-bottom:1rem;
-}
-
-.btn-project{
-  display:inline-block;
-  padding:15px 35px;
-  border-radius:50px;
-  font-weight:800;
-  text-decoration:none;
-  border:2px solid white;
-  margin-top:20px;
-  transition:0.3s ease;
-  color:white;
-}
-
-.btn-project:hover{
-  background:white;
-  color:black;
-  transform:scale(1.05);
-}
-
-/* TEAM */
-.team-section{
-  background:#111;
-  padding:100px 8%;
+.hero-content{
+  position:relative;
+  z-index:2;
   text-align:center;
 }
 
-.team-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:40px;
-  margin-top:60px;
+.hero-content h1{
+  font-family:'Gochi Hand',cursive;
+  font-size:6rem;
+  line-height:1;
+  text-shadow:0 4px 20px rgba(0,0,0,0.5);
 }
 
-.team-member img{
+.hero-content p{
+  font-size:1.3rem;
+  margin-top:1rem;
+  opacity:0.85;
+  text-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* ABOUT */
+.about-section{
+  padding:100px 8%;
+  display:flex;
+  align-items:center;
+  gap:80px;
+  flex-wrap:wrap;
+  background:#0d0d1a;
+}
+
+.about-image{
+  flex:1;
+  min-width:280px;
+}
+
+.about-image img{
   width:100%;
   border-radius:12px;
-  border:4px solid var(--purple-brand);
-  margin-bottom:20px;
+  box-shadow:20px 20px 0 rgba(97,4,255,0.3);
+}
+
+.about-text{
+  flex:1;
+  min-width:280px;
+}
+
+.about-text h2{
+  font-size:2.8rem;
+  font-weight:800;
+  margin-bottom:1.5rem;
+}
+
+.about-text p{
+  line-height:1.8;
+  opacity:0.85;
+  margin-bottom:1rem;
+}
+
+/* AWARDS */
+.awards-section{
+  position:relative;
+  overflow:hidden;
+  min-height:70vh;
+}
+
+.awards-section img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.awards-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to right, rgba(10,10,10,0.85) 40%, transparent);
+  display:flex;
+  align-items:center;
+  padding:8%;
+}
+
+.awards-text h2{
+  font-size:2.5rem;
+  font-weight:800;
+  margin-bottom:1rem;
+}
+
+.awards-text p{
+  opacity:0.85;
+  line-height:1.8;
+  max-width:480px;
+}
+
+.award-list{
+  list-style:none;
+  margin-top:1.5rem;
+}
+
+.award-list li{
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,0.15);
+  display:flex;
+  align-items:center;
+  gap:12px;
+  opacity:0.9;
+}
+
+.award-list li::before{
+  content:"🏆";
+  font-size:1.2rem;
 }
 
 /* CONTACT */
@@ -189,25 +247,49 @@ header{
   flex-wrap:wrap;
 }
 
-.social-icons img{
-  width:65px;
+.social-icons a{
   transition:0.3s ease;
+  display:inline-block;
 }
 
-.social-icons img:hover{
+.social-icons a:hover{
   transform:scale(1.2) rotate(-5deg);
+}
+
+/* FOOTER */
+footer{
+  background:#0a0a0a;
+  padding:30px 5%;
+  text-align:center;
+  font-size:0.85rem;
+  opacity:0.5;
 }
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .project-image,
-  .project-info{
-    min-width:100%;
-    text-align:center;
+  .hero-content h1{
+    font-size:4rem;
   }
 
-  .project-info h2{
-    font-size:2rem;
+  .about-section{
+    flex-direction:column;
+  }
+
+  .awards-overlay{
+    position:relative;
+    background:rgba(10,10,10,0.85);
+    padding:60px 8%;
+  }
+
+  .awards-section{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .awards-section img{
+    max-height:300px;
+    object-fit:cover;
+    object-position:center;
   }
 }
 </style>
@@ -216,99 +298,57 @@ header{
 <body>
 
 <header>
-<a href="#home" class="logo-container">
-<img src="imagenes/logo.png" class="raton-img" alt="Supahpure Logo">
+<a href="index.html" class="logo-container">
+<img src="images/tu-rata-ideal.jpg" class="raton-img" alt="Supahpure Logo" style="border-radius:50%;object-fit:cover;height:70px;">
 <div class="texto-logo">Supahpure<br>Studios</div>
 </a>
+<a href="index.html" class="back-link">← Volver al inicio</a>
 </header>
 
+<!-- HERO -->
 <section class="hero" id="home">
 <video class="hero-video" autoplay muted loop playsinline>
 <source src="marta-720.mp4" type="video/mp4">
 </video>
 <div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Marta</h1>
+<p>Un cortometraje de animación digital</p>
+</div>
 </section>
 
-<!-- PROJECTS -->
-<section id="proyectos">
-
-<div class="project-row" style="background:#0d0d1a;">
-<div class="project-image">
-<img src="images/treasures-marta.jpg" alt="Marta - Treasures">
+<!-- ABOUT -->
+<section class="about-section" id="sobre">
+<div class="about-image">
+<img src="images/treasures-marta.jpg" alt="Escena de Marta - Treasures">
 </div>
-<div class="project-info">
-<h2>Marta</h2>
-<p>Una historia de animación digital que explora los tesoros emocionales de la vida cotidiana a través de personajes entrañables y mundos coloridos.</p>
-<a href="landing-marta.html" class="btn-project">Ver proyecto</a>
+<div class="about-text">
+<h2>Sobre el proyecto</h2>
+<p>Marta es un cortometraje de animación digital que narra la historia de una joven rata que descubre que los verdaderos tesoros de la vida no son los que brillan, sino los que se sienten.</p>
+<p>Producido completamente por el equipo de Supahpure Studios, el film combina técnicas de animación 2D y 3D con una banda sonora original que transporta al espectador a un mundo lleno de emoción y color.</p>
+<p>Duración: 12 minutos · Año: 2025 · Idioma: Español</p>
 </div>
-</div>
-
-<div class="project-row reverse" style="background:#0a0a0a;">
-<div class="project-image">
-<img src="images/project-escape.jpg" alt="Escape Room">
-</div>
-<div class="project-info">
-<h2>Escape Room</h2>
-<p>Un corto de animación lleno de suspenso y humor donde un grupo de amigos debe resolver acertijos imposibles para salir de una sala misteriosa.</p>
-<a href="#contacto" class="btn-project">Ver proyecto</a>
-</div>
-</div>
-
-<div class="project-row" style="background:#0d0d1a;">
-<div class="project-image">
-<img src="images/tales-eldoria.jpg" alt="Tales of Eldoria">
-</div>
-<div class="project-info">
-<h2>Tales of Eldoria</h2>
-<p>Serie de animación épica ambientada en un mundo de fantasía donde héroes y criaturas míticas conviven en una aventura sin fin.</p>
-<a href="#contacto" class="btn-project">Ver proyecto</a>
-</div>
-</div>
-
-<div class="project-row reverse" style="background:#0a0a0a;">
-<div class="project-image">
-<img src="images/eventos-aneey.webp" alt="Aneey">
-</div>
-<div class="project-info">
-<h2>Aneey</h2>
-<p>Animación para eventos en vivo que fusiona la magia del dibujo digital con experiencias inmersivas para el público.</p>
-<a href="#contacto" class="btn-project">Ver proyecto</a>
-</div>
-</div>
-
 </section>
 
-<!-- TEAM -->
-<section class="team-section" id="equipo">
-<h2 style="font-size:2.5rem;font-weight:800;">El Equipo</h2>
-<p style="margin-top:10px;opacity:0.7;">Las personas detrás de la magia</p>
-<div class="team-grid">
-<div class="team-member">
-<img src="images/rodrigo.jpg" alt="Rodrigo">
-<h3>Rodrigo</h3>
-<p style="opacity:0.7;margin-top:5px;">Director Creativo</p>
-</div>
-<div class="team-member">
-<img src="images/antonia.jpg" alt="Antonia">
-<h3>Antonia</h3>
-<p style="opacity:0.7;margin-top:5px;">Animadora Principal</p>
-</div>
-<div class="team-member">
-<img src="images/cristobal.jpg" alt="Cristóbal">
-<h3>Cristóbal</h3>
-<p style="opacity:0.7;margin-top:5px;">Diseñador de Personajes</p>
-</div>
-<div class="team-member">
-<img src="images/lisette.jpg" alt="Lisette">
-<h3>Lisette</h3>
-<p style="opacity:0.7;margin-top:5px;">Productora</p>
+<!-- AWARDS -->
+<section class="awards-section" id="premios">
+<img src="images/awards-marta-1920.webp" alt="Premios Marta">
+<div class="awards-overlay">
+<div class="awards-text">
+<h2>Premios y reconocimientos</h2>
+<p>Marta ha recorrido festivales de cine de animación a nivel latinoamericano y europeo, cosechando reconocimientos en cada proyección.</p>
+<ul class="award-list">
+<li>Mejor Cortometraje de Animación — Festival Animasivo</li>
+<li>Premio del Público — Anima Latina 2025</li>
+<li>Selección oficial — Cartoon Forum</li>
+</ul>
 </div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section class="contact-section" id="contacto">
-<h2 class="contact-title">¡Trabajemos juntos!</h2>
+<h2 class="contact-title">¡Contáctanos!</h2>
 <a href="mailto:hola@supahpure.com" class="email-link">hola@supahpure.com</a>
 <div class="social-icons">
 <a href="https://www.instagram.com/supahpure" aria-label="Instagram" target="_blank" rel="noopener">
@@ -345,6 +385,10 @@ header{
 </a>
 </div>
 </section>
+
+<footer>
+<p>© 2025 Supahpure Studios. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
