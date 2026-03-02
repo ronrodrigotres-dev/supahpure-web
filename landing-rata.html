@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Rata Ideal | Supahpure Studios</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Gochi+Hand&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --white:#ffffff;
+  --black:#0a0a0a;
+  --purple-brand:#6104ff;
+  --purple-bg:#3b0764;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--black);
+  color:var(--white);
+  overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:1.2rem 5vw;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  z-index:1000;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  text-decoration:none;
+  color:white;
+}
+
+.raton-img{
+  width:70px;
+}
+
+.texto-logo{
+  font-family:'Gochi Hand',cursive;
+  font-size:2rem;
+  line-height:0.8;
+}
+
+.back-link{
+  color:white;
+  text-decoration:none;
+  font-weight:700;
+  font-size:0.95rem;
+  border:2px solid rgba(255,255,255,0.5);
+  padding:8px 20px;
+  border-radius:50px;
+  transition:0.3s ease;
+}
+
+.back-link:hover{
+  background:white;
+  color:black;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-video{
+  position:absolute;
+  top:50%;
+  left:50%;
+  min-width:100%;
+  min-height:100%;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
+}
+
+.hero-overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(10,10,10,0.6));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.hero-content h1{
+  font-family:'Gochi Hand',cursive;
+  font-size:6rem;
+  line-height:1;
+  text-shadow:0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-content p{
+  font-size:1.3rem;
+  margin-top:1rem;
+  opacity:0.85;
+  text-shadow:0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* ABOUT */
+.about-section{
+  padding:100px 8%;
+  display:flex;
+  align-items:center;
+  gap:80px;
+  flex-wrap:wrap;
+  background:#0d0d1a;
+}
+
+.about-image{
+  flex:1;
+  min-width:280px;
+}
+
+.about-image img{
+  width:100%;
+  border-radius:12px;
+  box-shadow:20px 20px 0 rgba(97,4,255,0.3);
+}
+
+.about-text{
+  flex:1;
+  min-width:280px;
+}
+
+.about-text h2{
+  font-size:2.8rem;
+  font-weight:800;
+  margin-bottom:1.5rem;
+}
+
+.about-text p{
+  line-height:1.8;
+  opacity:0.85;
+  margin-bottom:1rem;
+}
+
+/* CONTACT */
+.contact-section{
+  background:var(--purple-bg);
+  padding:100px 5%;
+  text-align:center;
+}
+
+.contact-title{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.email-link{
+  color:white;
+  text-decoration:none;
+  font-size:1.3rem;
+  display:block;
+  margin-bottom:40px;
+}
+
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.social-icons a{
+  transition:0.3s ease;
+  display:inline-block;
+}
+
+.social-icons a:hover{
+  transform:scale(1.2) rotate(-5deg);
+}
+
+/* FOOTER */
+footer{
+  background:#0a0a0a;
+  padding:30px 5%;
+  text-align:center;
+  font-size:0.85rem;
+  opacity:0.5;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-content h1{
+    font-size:4rem;
+  }
+
+  .about-section{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="logo-container">
+<img src="assets/images/tu-rata-ideal.jpg" class="raton-img" alt="Tu Rata Ideal" style="border-radius:50%;object-fit:cover;height:70px;">
+<div class="texto-logo">Supahpure<br>Studios</div>
+</a>
+<a href="index.html" class="back-link">← Volver al inicio</a>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<video class="hero-video" autoplay muted loop playsinline>
+<source src="rata-720.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<h1>Tu Rata Ideal</h1>
+<p>Una novela visual de comedia y parodia</p>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="sobre">
+<div class="about-image">
+<img src="assets/images/tu-rata-ideal.jpg" alt="Tu Rata Ideal">
+</div>
+<div class="about-text">
+<h2>Sobre el proyecto</h2>
+<p>"Tu Rata Ideal" es una novela visual de comedia que parodia el propio género, llevando al extremo los clichés del romance y la aventura con un humor irreverente y absurdo.</p>
+<p>Un proyecto único de Supahpure Studios que mezcla la animación 2D con mecánicas interactivas para crear una experiencia narrativa completamente original.</p>
+<p>Episodios: 6 · Año: 2025 · Idioma: Español</p>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contacto">
+<h2 class="contact-title">¡Contáctanos!</h2>
+<a href="mailto:hola@supahpure.com" class="email-link">hola@supahpure.com</a>
+<div class="social-icons">
+<a href="https://www.instagram.com/supahpure" aria-label="Instagram" target="_blank" rel="noopener">
+<img src="assets/images/instagram-transparent.png" alt="">
+</a>
+<a href="https://www.facebook.com/supahpure" aria-label="Facebook" target="_blank" rel="noopener">
+<img src="assets/images/facebook-transparent.png" alt="">
+</a>
+<a href="https://www.youtube.com/@supahpure" aria-label="YouTube" target="_blank" rel="noopener">
+<img src="assets/images/youtube-transparent.png" alt="">
+</a>
+<a href="https://www.tiktok.com/@supahpure" aria-label="TikTok" target="_blank" rel="noopener">
+<img src="assets/images/tiktok-transparent.png" alt="">
+</a>
+<a href="https://twitter.com/supahpure" aria-label="Twitter / X" target="_blank" rel="noopener">
+<img src="assets/images/twitter-transparent.png" alt="">
+</a>
+</div>
+</section>
+
+<footer>
+<p>© 2025 Supahpure Studios. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
