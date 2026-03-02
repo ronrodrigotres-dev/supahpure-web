@@ -1,0 +1,129 @@
+<! DOCTYPE html>
+<HTML lang="es">
+<cabeza>
+<Meta Charset="UTF-8" />
+<Meta Nombre="Ventana de observación" Contenido="ancho=ancho de dispositivo, escala inicial=1.0" />
+<Título>Los tesoros de Marta | Estudios Supahpure</Título>
+<enlace REL="Preconexión" HFE="https://fonts.googleapis.com">
+<enlace HFE="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Gochi+Hand&display=swap" REL="Hoja de estilo">
+<Estilo>
+:Raíz{
+  --morado:#5b2bbf;
+  --luz:#f2f2f2;
+  --oscuro:#000;
+  --morado-bg:#3b0764;
+  --marca morada:#6104 y siguientes;
+}
+*{Margen:0;Acolchado:0;Dimensionamiento de caja:border-box;}
+Cuerpo{
+  Familia de fuentes:'Inter',sans-serif;
+  Antecedentes:#000;
+  Color:#FFF;
+  Overflow-X:oculto;
+}
+/* CABECERA (ÍNDICE DEL LOGO 1) */
+Encabezado{
+  Posición:arreglado;
+  arriba:0;
+  izquierda:0;
+  Anchura:100%;
+  Acolchado:20px 5VW;
+  Pantalla:flexión;
+  Elementos-alineados:centro;
+  Z-índice:1000;
+  Antecedentes:Gradiente lineal(al final, RGBA(0,0,0,0.6), transparente);
+}
+.Logo-contenedor{
+  Pantalla:flexión;
+  Elementos-alineados:centro;
+  Gap:15px;
+  Decoración de texto:ninguno;
+  Color:#ffffff;
+}
+.Raton-IMG{
+  Anchura:70px;
+  Altura:auto;
+  Pantalla:Bloquear;
+}
+.Texto-logo{
+  Familia de fuentes:'Mano de Gochi',cursiva;
+  tamaño de fuente:2.2REM;
+  Altura de línea:0.8;
+}
+@media(Ancho máximo:768px){
+  .Raton-IMG{Anchura:55px;}
+  .Texto-logo{tamaño de fuente:1.8REM;}
+}
+/* VÍDEO DE HÉROES (PANTALLA COMPLETA) */
+.Héroe{
+  Altura:100vh;
+  Posición:relativo;
+  desbordamiento:oculto;
+  Antecedentes:negro;
+}
+.Vídeo de héroe{
+  Posición:absoluto;
+  arriba:50%;
+  izquierda:50%;
+  Ancho mínimo:100%;
+  Altura mínima:100%;
+  transformar:traducir(-50%,-50%);
+  Ajuste de objetos:cobertura;
+  z-index:0;
+}
+.superposición de héroes{
+  Posición:absoluto;
+  Anchura:100%;
+  Altura:100%;
+  Antecedentes:RGBA(0,0,0,0.30);
+  Pantalla:flexión;
+  dirección flexible:columna;
+  Elementos-alineados:centro;
+  Justificar-contenido:centro;
+  Color:blanco;
+  Z-índice:1;
+  text-align:centro;
+  Acolchado:20px;
+}
+.superposición de héroes h1{
+  tamaño de fuente:abrazadera(2.6REM,5VW,4REM);
+  Peso de fuente:800;
+}
+.superposición de héroes p{
+  tamaño de fuente:1.3REM;
+  margen-arriba:10px;
+  Opacidad:.95;
+}
+/* ARTE CLAVE (IMAGEN) */
+.Keyart{
+  Acolchado:120px 8% 80px;
+  Antecedentes:#000;
+  text-align:centro;
+}
+.Keyart h2{
+  tamaño de fuente:abrazadera(2REM,4VW,3REM);
+  margen-fondo:35px;
+}
+.Keyart IMG{
+  Anchura:100%;
+  Ancho máximo:1200px;
+  Altura:auto;
+  Radio de frontera:15px;
+  Sombra de caja:0 20px 40px RGBA(0,0,0,0.4);
+}
+/* SECCIÓN DE HISTORIA */
+.Historia{
+  Pantalla:flexión;
+  Envoltura flexible:envoltura;
+  Acolchado:100px 8%;
+  Antecedentes:#111;
+  Gap:60px;
+}
+.Story-left{
+  Flexión:1;
+  Ancho mínimo:300px;
+  tamaño de fuente:2REM;
+  Peso de fuente:800;
+  Color:var(--marca morada);
+  Altura de línea:1.4;
+}
