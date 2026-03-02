@@ -10,160 +10,181 @@
 
 <style>
 :root{
---white:#ffffff;
---black:#0a0a0a;
---purple-brand:#6104ff;
---purple-bg:#3b0764;
+  --white:#ffffff;
+  --black:#0a0a0a;
+  --purple-brand:#6104ff;
+  --purple-bg:#3b0764;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#fff;overflow-x:hidden;}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--black);
+  color:var(--white);
+  overflow-x:hidden;
+}
 
+/* HEADER */
 header{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:1.2rem 5vw;
-display:flex;
-align-items:center;
-z-index:1000;
-background:linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:1.2rem 5vw;
+  display:flex;
+  align-items:center;
+  z-index:1000;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
 }
 
 .logo-container{
-display:flex;
-align-items:center;
-gap:1rem;
-text-decoration:none;
-color:white;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  text-decoration:none;
+  color:white;
 }
 
 .raton-img{width:70px;height:auto;}
-.texto-logo{font-family:'Gochi Hand',cursive;font-size:2rem;line-height:0.8;}
+.texto-logo{
+  font-family:'Gochi Hand',cursive;
+  font-size:2rem;
+  line-height:0.8;
+}
 
+/* HERO */
 .hero{
-height:100vh;
-position:relative;
-overflow:hidden;
-background:black;
+  height:100vh;
+  position:relative;
+  overflow:hidden;
+  background:black;
 }
 
 .hero-video{
-position:absolute;
-top:50%;
-left:50%;
-min-width:100%;
-min-height:100%;
-transform:translate(-50%,-50%);
-object-fit:cover;
+  position:absolute;
+  top:50%;
+  left:50%;
+  min-width:100%;
+  min-height:100%;
+  transform:translate(-50%,-50%);
+  object-fit:cover;
 }
 
 .hero-overlay{
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.2);
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.2);
 }
 
+/* PROJECTS */
 .project-row{
-display:flex;
-min-height:100vh;
-align-items:center;
-flex-wrap:wrap;
+  display:flex;
+  min-height:100vh;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
-.project-row.reverse{flex-direction:row-reverse;}
+.project-row.reverse{
+  flex-direction:row-reverse;
+}
 
-.project-image,.project-info{
-flex:1;
-min-width:50%;
-padding:5% 8%;
+.project-image,
+.project-info{
+  flex:1;
+  min-width:50%;
+  padding:5% 8%;
 }
 
 .project-image img{
-width:100%;
-border-radius:6px;
-box-shadow:25px 25px 0 rgba(0,0,0,0.2);
+  width:100%;
+  border-radius:8px;
+  box-shadow:20px 20px 0 rgba(0,0,0,0.2);
 }
 
 .project-info h2{
-font-weight:800;
-font-size:3rem;
-margin-bottom:1rem;
+  font-weight:800;
+  font-size:3rem;
+  margin-bottom:1rem;
+}
+
+.project-info p{
+  margin-bottom:1rem;
 }
 
 .btn-project{
-display:inline-block;
-padding:15px 35px;
-border-radius:50px;
-font-weight:800;
-text-decoration:none;
-border:2px solid white;
-margin-top:20px;
-transition:.3s ease;
+  display:inline-block;
+  padding:15px 35px;
+  border-radius:50px;
+  font-weight:800;
+  text-decoration:none;
+  border:2px solid white;
+  margin-top:20px;
+  transition:0.3s ease;
 }
 
 .btn-project:hover{
-background:white;
-color:black;
-transform:scale(1.05);
+  background:white;
+  color:black;
+  transform:scale(1.05);
 }
 
+/* TEAM */
 .team-section{
-background:#111;
-padding:100px 8%;
-text-align:center;
+  background:#111;
+  padding:100px 8%;
+  text-align:center;
 }
 
 .team-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
-margin-top:60px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+  margin-top:60px;
 }
 
 .team-member img{
-width:100%;
-border-radius:12px;
-border:4px solid var(--purple-brand);
-margin-bottom:20px;
+  width:100%;
+  border-radius:12px;
+  border:4px solid var(--purple-brand);
+  margin-bottom:20px;
 }
 
+/* CONTACT */
 .contact-section{
-background:var(--purple-bg);
-padding:100px 5%;
-text-align:center;
+  background:var(--purple-bg);
+  padding:100px 5%;
+  text-align:center;
 }
 
 .contact-title{
-font-size:3rem;
-margin-bottom:20px;
+  font-size:3rem;
+  margin-bottom:20px;
 }
 
 .email-link{
-color:white;
-text-decoration:none;
-font-size:1.3rem;
-display:block;
-margin-bottom:40px;
+  color:white;
+  text-decoration:none;
+  font-size:1.3rem;
+  display:block;
+  margin-bottom:40px;
 }
 
 .social-icons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
 .social-icons img{
-width:65px;
-transition:.3s ease;
+  width:65px;
+  transition:0.3s ease;
 }
 
 .social-icons img:hover{
-transform:scale(1.2) rotate(-5deg);
+  transform:scale(1.2) rotate(-5deg);
 }
 </style>
 </head>
@@ -199,7 +220,7 @@ transform:scale(1.2) rotate(-5deg);
 
 <article class="project-row reverse" style="background:#ec4899;">
 <div class="project-image">
-<img src="imagenes/tu-rata-ideal.jpg" alt="Rata">
+<img src="imagenes/tu-rata-ideal.jpg" alt="Tu Rata Ideal">
 </div>
 <div class="project-info">
 <h2>TU RATA IDEAL</h2>
@@ -210,7 +231,7 @@ transform:scale(1.2) rotate(-5deg);
 
 <article class="project-row" style="background:#4A3FD6;">
 <div class="project-image">
-<img src="imagenes/tales-eldoria.jpg" alt="Eldoria">
+<img src="imagenes/tales-eldoria.jpg" alt="Tales of Eldoria">
 </div>
 <div class="project-info">
 <h2>TALES OF ELDORIA</h2>
@@ -221,7 +242,7 @@ transform:scale(1.2) rotate(-5deg);
 
 <article class="project-row reverse" style="background:#a3e635;color:black;">
 <div class="project-image">
-<img src="imagenes/project-escape.jpg" alt="Escape">
+<img src="imagenes/project-escape.jpg" alt="Project Escape">
 </div>
 <div class="project-info">
 <h2>PROJECT ESCAPE</h2>
@@ -238,25 +259,25 @@ transform:scale(1.2) rotate(-5deg);
 <div class="team-grid">
 
 <div class="team-member">
-<img src="imagenes/antonia.jpg">
+<img src="imagenes/antonia.jpg" alt="Antonia">
 <h3>Antonia Venegas Gonzalez</h3>
 <p>Director & Founder</p>
 </div>
 
 <div class="team-member">
-<img src="imagenes/cristobal.jpg">
+<img src="imagenes/cristobal.jpg" alt="Cristobal">
 <h3>Cristobal Rojas Labra</h3>
 <p>Music & Sound</p>
 </div>
 
 <div class="team-member">
-<img src="imagenes/lisette.jpg">
+<img src="imagenes/lisette.jpg" alt="Lisette">
 <h3>Lisette Kamann Beuchat</h3>
 <p>Screenwriter</p>
 </div>
 
 <div class="team-member">
-<img src="imagenes/rodrigo.jpg">
+<img src="imagenes/rodrigo.jpg" alt="Rodrigo">
 <h3>Rodrigo Venegas Vargas</h3>
 <p>Producer</p>
 </div>
@@ -271,11 +292,11 @@ hello@supahpurestudios.com
 </a>
 
 <div class="social-icons">
-<a href="#"><img src="imagenes/instagram-transparent.png"></a>
-<a href="#"><img src="imagenes/facebook-transparent.png"></a>
-<a href="#"><img src="imagenes/twitter-transparent.png"></a>
-<a href="#"><img src="imagenes/tiktok-transparent.png"></a>
-<a href="#"><img src="imagenes/youtube-transparent.png"></a>
+<a href="#"><img src="imagenes/instagram-transparent.png" alt="Instagram"></a>
+<a href="#"><img src="imagenes/facebook-transparent.png" alt="Facebook"></a>
+<a href="#"><img src="imagenes/twitter-transparent.png" alt="Twitter"></a>
+<a href="#"><img src="imagenes/tiktok-transparent.png" alt="TikTok"></a>
+<a href="#"><img src="imagenes/youtube-transparent.png" alt="YouTube"></a>
 </div>
 
 </footer>
