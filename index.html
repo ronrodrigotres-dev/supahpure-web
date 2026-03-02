@@ -1,0 +1,220 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supahpure Studios | Animación Digital y Desarrollo Visual</title>
+    <meta name="description" content="Supahpure Studios es un estudio independiente de animación digital y desarrollo visual. Creamos universos originales, proyectos audiovisuales y experiencias narrativas.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Gochi+Hand&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --white: #ffffff;
+            --black: #0a0a0a;
+            --purple-brand: #6104ff;
+            --purple-bg: #3b0764;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--black); color: var(--white); overflow-x: hidden; }
+
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            padding: 1.2rem 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--white); }
+        .raton-img { width: 70px; height: auto; }
+        .texto-logo { font-family: 'Gochi Hand', cursive; font-size: 2rem; line-height: 0.8; }
+
+        .hero {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.01); 
+            z-index: 1;
+        }
+
+        .project-row { display: flex; min-height: 100vh; align-items: center; flex-wrap: wrap; }
+        .project-row.reverse { flex-direction: row-reverse; }
+        .project-image, .project-info { flex: 1; min-width: 50%; padding: 5% 8%; }
+        .project-image img { width: 100%; height: auto; border-radius: 4px; box-shadow: 25px 25px 0px rgba(0,0,0,0.2); }
+        .project-info h2 { font-weight: 800; font-size: 3.5rem; text-transform: uppercase; margin-bottom: 1rem; line-height: 1; }
+
+        .btn-project {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            border: 2px solid white;
+            margin-top: 20px;
+        }
+
+        .btn-marta { color: white; background: transparent; }
+        .btn-marta:hover { background: white; color: #6b21a8; transform: scale(1.05); }
+
+        .btn-rata { color: white; background: transparent; }
+        .btn-rata:hover { background: white; color: #ec4899; transform: scale(1.05); }
+
+        .btn-eldoria { color: white; background: transparent; }
+        .btn-eldoria:hover { background: white; color: #4A3FD6; transform: scale(1.05); }
+
+        .btn-escape { color: #000; border-color: #000; background: transparent; }
+        .btn-escape:hover { background: #000; color: #a3e635; transform: scale(1.05); }
+
+        .team-section { background-color: #111; padding: 100px 8%; text-align: center; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-top: 60px; }
+        .team-member img { width: 100%; border-radius: 12px; border: 4px solid var(--purple-brand); margin-bottom: 20px; }
+        .team-member h3 { font-size: 1.3rem; margin-bottom: 5px; }
+        .team-member p { color: var(--purple-brand); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; }
+
+        .contact-section { background-color: var(--purple-bg); padding: 100px 5%; text-align: center; }
+        .contact-title { font-size: 4rem; font-weight: 800; margin-bottom: 20px; }
+        .email-link { color: white; text-decoration: none; font-size: 1.5rem; font-weight: 700; display: block; margin-bottom: 40px; }
+
+        .social-icons { display: flex; justify-content: center; gap: 20px; align-items: center; flex-wrap: wrap; }
+        .social-icons img { width: 65px; height: auto; transition: 0.3s ease; filter: drop-shadow(3px 3px 5px rgba(0,0,0,0.3)); }
+        .social-icons img:hover { transform: scale(1.2) rotate(-5deg); }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <a href="#home" class="logo-container">
+        <img src="https://supahpurestudios.com/wp-content/uploads/2026/02/ChatGPT-Image-6-feb-2026-04_03_35-1.png" alt="Logo Supahpure Studios" class="raton-img">
+        <div class="texto-logo">Supahpure<br>Studios</div>
+    </a>
+</header>
+
+<section class="hero" id="home">
+    <h1 style="position:absolute; left:-9999px;">
+        Supahpure Studios - Estudio de Animación Digital
+    </h1>
+
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+        <source src="https://supahpurestudios.com/wp-content/uploads/2026/02/reelsupahpureeee.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+</section>
+
+<section id="projects">
+    <article class="project-row" style="background-color: #6b21a8;">
+        <div class="project-image"><img src="assets/images/treasures-marta.jpg" alt="Marta"></div>
+        <div class="project-info">
+            <h2>THE TREASURES OF MARTA!</h2>
+            <p>An urban adventure of mystery and scout exploration guided by Marta's Journal.</p>
+            <a href="landing-marta.html" class="btn-project btn-marta">EXPLORE PROJECT →</a>
+        </div>
+    </article>
+
+    <article class="project-row reverse" style="background-color: #ec4899;">
+        <div class="project-image"><img src="assets/images/tu-rata-ideal.jpg" alt="Rata"></div>
+        <div class="project-info">
+            <h2>"TU RATA IDEAL"</h2>
+            <p>A quirky comedy visual novel that parodies the genre itself.</p>
+            <a href="landing-rata.html" class="btn-project btn-rata">EXPLORE PROJECT →</a>
+        </div>
+    </article>
+
+    <article class="project-row" style="background-color: #4A3FD6;">
+        <div class="project-image"><img src="assets/images/tales-eldoria.jpg" alt="Eldoria"></div>
+        <div class="project-info">
+            <h2>TALES OF ELDORIA</h2>
+            <p>In a magical realm, a group of gifted children uncovers an ancient prophecy.</p>
+            <a href="landing-eldoria.html" class="btn-project btn-eldoria">EXPLORE PROJECT →</a>
+        </div>
+    </article>
+
+    <article class="project-row reverse" style="background-color: #a3e635; color: #000;">
+        <div class="project-image"><img src="assets/images/project-escape.jpg" alt="Escape"></div>
+        <div class="project-info">
+            <h2 style="color: #000;">PROJECT ESCAPE</h2>
+            <p style="color: #000;">An intrepid girl escapes the police on her skateboard, leaving a trail of art.</p>
+            <a href="landing-escape.html" class="btn-project btn-escape">EXPLORE PROJECT →</a>
+        </div>
+    </article>
+</section>
+
+<section id="team" class="team-section">
+    <h2 class="team-title">MEET THE TEAM!</h2>
+    <div class="team-grid">
+        <div class="team-member">
+            <img src="assets/images/antonia.jpg" alt="Antonia">
+            <h3>Antonia Venegas Gonzalez</h3>
+            <p>Director & Founder</p>
+        </div>
+        <div class="team-member">
+            <img src="assets/images/cristobal.jpg" alt="Cristobal">
+            <h3>Cristobal Rojas Labra</h3>
+            <p>Music & Sound Design</p>
+        </div>
+        <div class="team-member">
+            <img src="assets/images/lisette.jpg" alt="Lisette">
+            <h3>Lisette Kamann Beuchat</h3>
+            <p>Screenwriter</p>
+        </div>
+        <div class="team-member">
+            <img src="assets/images/rodrigo.jpg" alt="Rodrigo">
+            <h3>Rodrigo Venegas Vargas</h3>
+            <p>General Producer</p>
+        </div>
+    </div>
+</section>
+
+<footer class="contact-section">
+    <h2 class="contact-title">CONTACT US!</h2>
+    <a href="mailto:hello@supahpurestudios.com" class="email-link">hello@supahpurestudios.com</a>
+    <div class="social-icons">
+        <a href="https://instagram.com/supahpure" target="_blank">
+            <img src="assets/images/instagram-transparent.png" alt="Instagram">
+        </a>
+        <a href="https://facebook.com/supahpure" target="_blank">
+            <img src="assets/images/facebook-transparent.png" alt="Facebook">
+        </a>
+        <a href="https://twitter.com/supahpure" target="_blank">
+            <img src="assets/images/twitter-transparent.png" alt="Twitter">
+        </a>
+        <a href="https://tiktok.com/@supahpure" target="_blank">
+            <img src="assets/images/tiktok-transparent.png" alt="TikTok">
+        </a>
+        <a href="https://youtube.com/supahpure" target="_blank">
+            <img src="assets/images/youtube-transparent.png" alt="YouTube">
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>
